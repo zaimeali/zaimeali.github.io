@@ -1,0 +1,190 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+/* Variable */
+:root {
+    --primaryTextColor-light:#000;
+    --secondaryTextColor-light:rgb(51 51 51);
+    --linkColor-light:#0da2b8;
+    --borderColor-light:rgb(218, 218, 218);
+    --primaryBGColor-light:rgb(249, 250,251);
+
+    --primaryTextColor-dark:#fff;
+    --secondaryTextColor-dark:#adb0b1;
+    --linkColor-dark:rgb(30, 190,214);
+    --borderColor-dark:#2b3031;
+    --primaryBGColor-dark:#131415;
+
+    --primaryTextColor:var(--primaryTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --linkColor:var(--linkColor-dark);
+    --borderColor:var(--borderColor-dark);
+    --primaryBGColor:var(--primaryBGColor-dark);
+}
+
+/* All Styles */
+* {
+    font-family: 'Readex Pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--primaryTextColor);
+}
+
+/* Tag Styles */
+body {
+    background-color: var(--primaryBGColor);
+}
+
+p, 
+span, 
+li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--linkColor);
+    font-size: 500;
+    font-weight: 300;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+/* ID Styles */
+#container-main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#wrapper-intro {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#summary {
+    font-weight: 300;
+}
+
+#full-name {
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+#profile-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#email {
+    color: var(--primaryTextColor);
+}
+
+#socials-list {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#socials-list a {
+    font-size: 0.9em;
+    color: var(--secondaryTextColor);
+    transition: 0.3s;
+}
+#socials-list a:hover {
+    color: var(--linkColor);
+}
+
+#skills-list {
+    list-style: none;
+}
+
+#techstack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+    /* flex-direction: column; */
+}
+
+/* Class Styles */
+.wrapper--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.divider {
+    border-top: 1px solid var(--primaryTextColor-dark);
+}
+
+.card--techstack {
+    border: 1px solid var(--borderColor);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.card--workhistory {
+    border-left: 1px solid var(--borderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+}
+
+.work--divider {
+    border: 1px solid var(--borderColor);
+    background-color: var(--borderColor);
+    height: 1px;
+}
+
+.card--project,
+.card--award {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid var(--borderColor);
+}
+
+.card--award {
+    font-size: 14px;
+}
+
+.card--project a {
+    color: var(--linkColor);
+    transition: 0.3s;
+}
+.card--project a:hover {
+    color: var(--primaryTextColor);
+}
+
+/* Media Queries */
+@media(max-width: 600px) {
+    .wrapper--page {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #wrapper-intro {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #wrapper-intro div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #full-name {
+        text-align: center;
+    }
+
+    .card--workhistory {
+        border-left: none;
+        padding-left: 0;
+    }
+}
